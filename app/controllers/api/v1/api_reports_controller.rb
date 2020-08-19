@@ -7,6 +7,11 @@ module Api
         render json: {status: 'SUCCESS', message: 'Loaded reports', data: reports}
       end
 
+      def show
+        report = Report.find_by(id:params[:id])
+        render json: {data: report}
+      end
+
     end
     
   end
