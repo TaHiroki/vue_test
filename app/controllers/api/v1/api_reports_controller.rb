@@ -12,6 +12,19 @@ module Api
         render json: {data: report}
       end
 
+      def create
+        report = Report.new(index: params[:index], content: params[:content])
+        if report.save
+          head :no_content
+        end
+      end
+
+      private
+
+      def report_params
+        params.permit!
+      end
+
     end
     
   end

@@ -1,18 +1,23 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import index from './index.vue';
-import show from './show.vue';
+import Index from './index.vue';
+import Show from './show.vue';
+import New from './new.vue';
 
 Vue.use(Router);
 
 export default new Router({
   routes: [{
       path: '/',
-      component: index
+      component: Index
     },
     {
       path: '/show/:id',
-      component: show
+      component: Show
+    },
+    {
+      path: '/new',
+      component: New
     }
   ]
 });

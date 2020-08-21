@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <h1>詳細番号 {{ $route.params.id }}</h1>
+    <router-link to="/">一覧</router-link>
     <div>
       <p>題：{{ report.index }}</p>
       <p>コメント：{{ report.content }}</p>
