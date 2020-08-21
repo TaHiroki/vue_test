@@ -1,18 +1,13 @@
 <template>
   <div id="app">
-    <p>{{ message }}</p>
+    <h1>日報管理サイト</h1>
+    <nav>
+      <router-link to="/" tag="div">一覧</router-link>
+      <router-link to="/new" tag="div">新規登録</router-link>
+    </nav>
+    <router-view></router-view>
   </div>
 </template>
-
-<script>
-export default {
-  data: function () {
-    return {
-      message: "Hello Vue!"
-    }
-  }
-}
-</script>
 
 <style scoped>
 p {
